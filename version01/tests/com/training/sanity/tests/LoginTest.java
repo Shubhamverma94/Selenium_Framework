@@ -20,7 +20,7 @@ public class LoginTest {
 	private WebDriver driver;
 	private String baseUrl;
 	private LoginPOM loginPOM;
-	private ScreenShot screenShot;
+//	private ScreenShot screenShot;
 
 
 
@@ -28,7 +28,7 @@ public class LoginTest {
 	public void setUp() throws Exception {
 		driver = DriverFactory.getDriver(DriverNames.CHROME);
 		loginPOM = new LoginPOM(driver);
-		screenShot = new ScreenShot(driver);
+//		screenShot = new ScreenShot(driver);
 		baseUrl = "http://elearning.ohbreaks.com/"; 
 		// open the browser
 		driver.get(baseUrl);
@@ -45,7 +45,7 @@ public class LoginTest {
 		loginPOM.sendUserName("admin");
 		loginPOM.sendPassword("admin@123");
 		loginPOM.clickLoginBtn();
-		screenShot.captureScreenShot("First");
+//		screenShot.captureScreenShot("First");
 	}
 
 }
